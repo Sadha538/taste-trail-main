@@ -1,0 +1,34 @@
+{
+  "name": "tastetrail",
+  "version": "1.0.0",
+  "description": "TasteTrail - Recipe Discovery & Meal Planning Application",
+  "main": "index.js",
+  "scripts": {
+    "install-backend": "cd backend && npm install",
+    "install-frontend": "cd frontend && npm install",
+    "install-all": "npm run install-backend && npm run install-frontend",
+    "dev-backend": "cd backend && npm run dev",
+    "dev-frontend": "cd frontend && npm start",
+    "start-backend": "cd backend && npm start",
+    "start-frontend": "cd frontend && npm start"
+  },
+  "keywords": [
+    "recipe",
+    "meal-planning",
+    "cooking",
+    "food",
+    "react",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "Sadha Nandha",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sadha538/taste-trail-main.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sadha538/taste-trail-main/issues"
+  },
+  "homepage": "https://github.com/Sadha538/taste-trail-main#readme"
+}

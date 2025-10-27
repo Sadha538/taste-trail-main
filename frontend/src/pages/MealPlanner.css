@@ -1,0 +1,177 @@
+.meal-planner {
+  padding: 2rem 0;
+  min-height: calc(100vh - 80px);
+}
+
+.week-selector {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.week-selector input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.meal-planner-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+}
+
+.recipes-panel {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.recipes-panel h2 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.recipes-list {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.recipe-item {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  cursor: grab;
+}
+
+.recipe-item:active {
+  cursor: grabbing;
+}
+
+.recipe-item img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.recipe-item h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  color: #2c3e50;
+}
+
+.recipe-item p {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.meal-calendar {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.meal-calendar th,
+.meal-calendar td {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+
+.meal-calendar th {
+  background: #2c3e50;
+  color: white;
+  font-weight: 600;
+}
+
+.day-name {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.meal-slot {
+  min-height: 100px;
+  vertical-align: top;
+  position: relative;
+  background: #fafafa;
+}
+
+.meal-slot.drag-over {
+  background: #e3f2fd;
+  border: 2px dashed #2196f3;
+}
+
+.planned-meal {
+  background: white;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.planned-meal img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.planned-meal span {
+  flex: 1;
+  font-size: 0.85rem;
+  color: #2c3e50;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.planned-meal button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.error-message {
+  background: #fee;
+  color: #c33;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+@media (max-width: 1200px) {
+  .meal-planner-content {
+    grid-template-columns: 1fr;
+  }
+
+  .recipes-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .meal-calendar {
+    font-size: 0.85rem;
+  }
+
+  .meal-calendar th,
+  .meal-calendar td {
+    padding: 0.5rem;
+  }
+}
+
